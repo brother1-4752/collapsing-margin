@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsing-margin Practice</title>
+    <style>
+        div.first_child,
+        div.second_child{
+            width: 150px;
+            height: 150px;
+        }
+
+        div.first_child{
+            margin-bottom: 30px;
+            background-color: blue;
+        }
+        div.second_child{
+            margin-top: 30px;
+            background-color: red;
+        }
+
+        div.empty_box{
+            margin-top: 70px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h3>1. 인접 형제 박스 간 상하 마진이 겹칠 때</h1>
+    <div>
+        <div class="first_child"></div>
+        <div class="second_child"></div>
+    </div>
+
+    <h3>2. 빈 요소의 상하 마진이 겹칠 때</h3>
+    <div>
+        <div class="first_child"></div>
+        <div class="empty_box">
+            <!-- span on : 위아래 마진 그대로 살아있음
+            span off : 빈 요소의 상하 마진으로 되어, 마진상쇄됨 -->
+            <span>111</span>
+        </div>
+        <div class="second_child"></div>
+    </div>
+
+    <h3>3-1. 부모 박스와 첫 번째 자식 박스의 상단 마진이 나란히 겹칠 때 </h3>
+    <div class="first_child">
+        
+    </div>
+</body>
+</html>
